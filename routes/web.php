@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,9 +32,12 @@ Route::get('/produtos', function () {
 // });
 
 
-Route::view('/', 'home');
-//Route::view('/produto', 'produto');
+// Route::view('/', 'home');
+// //Route::view('/produto', 'produto');
 
-route::get('/produto/{nomeProduto}/comentarios/{id}', function ($nomeProduto, $id) {
-    echo "Este é o comentário " . $id . " do produto " . $nomeProduto;
-});
+// route::get('/produto/{nomeProduto}/comentarios/{id}', function ($nomeProduto, $id) {
+//     echo "Este é o comentário " . $id . " do produto " . $nomeProduto;
+// });
+
+// Route::get('/', 'HomeController@index'); versão antigaddd
+Route::get('/', [HomeController::class,'index']);
