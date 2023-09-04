@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\HomeController;
+use App\http\Controllers\ProdutosController;
+
+Route::get('/', [HomeController::class,'index']);
+Route::get('/produtos', [ProdutosController::class,'index']); // Método Get
+Route::post('/produtos', [ProdutosController::class,'index']); // Método Post
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,4 +47,3 @@ Route::get('/produtos', function () {
 // });
 
 // Route::get('/', 'HomeController@index'); versão antigaddd
-Route::get('/', [HomeController::class,'index']);
