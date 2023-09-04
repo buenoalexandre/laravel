@@ -46,4 +46,5 @@ Route::get('/produtos', function () {
 //     echo "Este é o comentário " . $id . " do produto " . $nomeProduto;
 // });
 
+// Route::get('/', 'HomeController@index'); versão mais antiga
 // Route::get('/', 'HomeController@index'); versão antiga
